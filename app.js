@@ -1,7 +1,7 @@
 const Popular_products = [
     {
       id: 1,
-      name: 'Faith T Shirt',
+      name: 'Faith T-Shirt',
       href: '#',
       imageSrc: 'https://sunnahconscious.com/cdn/shop/files/black_130361c7-b306-4774-8c39-41fc0b6f1eaf_493x.jpg?v=1717148215',
       imageAlt: "Guided By Faith Leading with Purpose.",
