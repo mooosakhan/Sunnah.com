@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sunnah</title>
+
+    <!-- flowbite CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Tailwind CSS CDN -->
+    <!-- <script src="https://cdn.tailwindcss.com/"></script> -->
+    
+    <!-- Style.css link tag -->  
+    <link rel="stylesheet" href="style.css">
+ 
+  </head>
+
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Nav Section -->
+  
+      <nav class="bg-white border-gray-200">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+              <a href="#" class="flex items-center space-x-3">
+                  <img src="https://sunnahbd.com/wp-content/uploads/2021/01/logo-gold-glitter-01.png" class="h-11" alt="Sunnah logo" />
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-900">Sunnah Stuff</span>
+              </a>
+              <div class="flex items-center md:order-2 space-x-3">
+                  <button type="button" class="flex text-sm bg-gray-200 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                      <span class="sr-only">Open user menu</span>
+                      <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="user photo">
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow" id="user-dropdown">
+                      <div class="px-4 py-3">
+                          <span class="block text-sm text-gray-900">Bonnie Green</span>
+                          <span class="block text-sm text-gray-500 truncate">name@flowbite.com</span>
+                        </div>
+                        <ul class="py-2" aria-labelledby="user-menu-button">
+                          <li><a href="#" class="block px-4 py-2 text-sm flex gap-6 text-gray-700 hover:bg-gray-100">Settings
+                            <svg class="w-6 h-6 text-gray-800 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <path stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="2" d="M10 19H5a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h2m10 1a3 3 0 0 1-3 3m3-3a3 3 0 0 0-3-3m3 3h1m-4 3a3 3 0 0 1-3-3m3 3v1m-3-4a3 3 0 0 1 3-3m-3 3h-1m4-3v-1m-2.121 1.879-.707-.707m5.656 5.656-.707-.707m-4.242 0-.707.707m5.656-5.656-.707.707M12 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                            </svg>
+                            
+                          </a></li>
+                          <button 
+                          id="open-modal"
+                          data-modal-target="top-right-modal" data-modal-toggle="top-right-modal" class="block w-full md:w-autofocus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center " type="button">
+                        
+                          <li >
+                            <a href="#" class="block px-4 py-2 flex  gap-4 text-sm text-gray-700 hover:bg-gray-100">Your Cart <svg class="w-6 h-6 text-gray-800 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                            </svg>
+                          </a></li>
+                        </button>
+                        
+
+                          <li><a href="#" class="block px-4 py-2 flex gap-6 text-sm text-gray-700 hover:bg-gray-100">Sign  out
+                            <svg class="w-6 h-6 text-gray-800 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4M4 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                            </svg>
+                            
+                          </a></li>
+                      </ul>
+                  </div>
+                  <div id="top-right-modal" data-modal-placement="top-right" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative w-full max-w-2xl max-h-full">
+                        <!-- Modal content -->
+                        <div class="modal relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+               
+                          <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+                        
+                          <div class="fixed inset-0 overflow-hidden">
+                            <div class="absolute inset-0 overflow-hidden">
+                              <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                           
+                                <div class="pointer-events-auto w-screen max-w-md">
+                                  <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                                    <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                                      <div class="flex items-start justify-between">
+                                        <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">Shopping cart</h2>
+                                        <div class="ml-3 flex h-7 items-center">
+                                          <button type="button" class="relative -m-2 p-2 text-gray-400 hover:text-gray-500">
+                                            <span class="cross absolute -inset-0.5"></span>
+                                            <span class="cross sr-only">Close panel</span>
+                                            <svg class="cross h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                        
+                                      <div class="mt-8">
+                                        <div class="flow-root">
+                                          <ul role="list" class="-my-6 divide-y divide-gray-200">
+                                            <li class="flex py-6">
+                                              <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center">
+                                              </div>
+                        
+                                              <div class="ml-4 flex flex-1 flex-col">
+                                                <div>
+                                                  <div class="flex justify-between text-base font-medium text-gray-900">
+                                                    <h3>
+                                                      <a href="#">Throwback Hip Bag</a>
+                                                    </h3>
+                                                    <p class="ml-4">$90.00</p>
+                                                  </div>
+                                                  <p class="mt-1 text-sm text-gray-500">Salmon</p>
+                                                </div>
+                                                <div class="flex flex-1 items-end justify-between text-sm">
+                                                  <p class="text-gray-500">Qty 1</p>
+                        
+                                                  <div class="flex">
+                                                    <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <li class="flex py-6">
+                                              <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg" alt="Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch." class="h-full w-full object-cover object-center">
+                                              </div>
+                        
+                                              <div class="ml-4 flex flex-1 flex-col">
+                                                <div>
+                                                  <div class="flex justify-between text-base font-medium text-gray-900">
+                                                    <h3>
+                                                      <a href="#">Medium Stuff Satchel</a>
+                                                    </h3>
+                                                    <p class="ml-4">$32.00</p>
+                                                  </div>
+                                                  <p class="mt-1 text-sm text-gray-500">Blue</p>
+                                                </div>
+                                                <div class="flex flex-1 items-end justify-between text-sm">
+                                                  <p class="text-gray-500">Qty 1</p>
+                        
+                                                  <div class="flex">
+                                                    <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                        
+                                            <!-- More products... -->
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                        
+                                    <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
+                                      <div class="flex justify-between text-base font-medium text-gray-900">
+                                        <p>Subtotal</p>
+                                        <p>$262.00</p>
+                                      </div>
+                                      <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                                      <div class="mt-6">
+                                        <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                                      </div>
+                                      <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                                        <p>
+                                          or
+                                          <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">
+                                            Continue Shopping
+                                            <span aria-hidden="true"> &rarr;</span>
+                                          </button>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                  <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-user" aria-expanded="false">
+                      <span class="sr-only">Open main menu</span>
+                      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                      </svg>
+                  </button>
+              </div>
+              <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                  <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+                      <li><a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</a></li>
+                      <li>
+                          <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">Products
+                              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                              </svg>
+                          </button>
+                      </li>
+                      <li><a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div id="mega-menu-full-dropdown" class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y hidden">
+              <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:px-6">
+                  <ul>
+                      <li>
+                          <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
+                              <div class="font-semibold">T Shirts</div>
+                              <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
+                              <div class="font-semibold">Full-Sleeves</div>
+                              <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                          </a>
+                      </li>
+                      
+                  </ul>
+                  <ul>
+                      <li>
+                          <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
+                              <div class="font-semibold">Sport wear</div>
+                              <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
+                              <div class="font-semibold">Accessories</div>
+                              <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                          </a>
+                      </li>
+                     
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+    <!-- Hero Section -->
+    
+      <div class="relative h-[90vh] overflow-hidden bg-white">
+          <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+            <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+              <div class="sm:max-w-lg">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Azadi Sale: Celebrate Freedom with Unbeatable Discounts!</h1>
+                <p class="mt-4 text-xl text-gray-500">
+                  This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care if you live or die.
+  
+                </p>
+              </div>
+              <div>
+                <div class="mt-10">
+                  <!-- Decorative image grid -->
+                  <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+                    <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                      <div class="flex items-center space-x-6 lg:space-x-8">
+                        <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                          <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                            <img src="https://sunnahconscious.com/cdn/shop/files/black_130361c7-b306-4774-8c39-41fc0b6f1eaf_600x.jpg?v=1717148215" alt="" class="h-full w-full object-cover object-center">
+                          </div>
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img src="https://sunnahconscious.com/cdn/shop/files/WhatsAppImage2024-02-26at22.40.56_493x.jpg?v=1708969424" alt="" class="h-full w-full object-cover object-center">
+                          </div>
+                        </div>
+                        <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img src="https://sunnahconscious.com/cdn/shop/files/black_130361c7-b306-4774-8c39-41fc0b6f1eaf_600x.jpg?v=1717148215" alt="" class="h-full w-full object-cover object-center">
+                          </div>
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img src="https://sunnahconscious.com/cdn/shop/files/black_1a196fb8-67e0-400d-bc57-b687d9e585d6_600x.jpg?v=1719228975" alt="" class="h-full w-full object-cover object-center">
+                          </div>
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img src="https://sunnahconscious.com/cdn/shop/files/3_600x.jpg?v=1717398667" alt="" class="h-full w-full object-cover object-center">
+                          </div>
+                        </div>
+                        <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img src="https://sunnahconscious.com/cdn/shop/files/black_cc3790db-76c0-4314-bcb7-2698a79989c9_600x.jpg?v=1719228270" alt="" class="h-full w-full object-cover object-center">
+                          </div>
+                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                            <img src="https://sunnahconscious.com/cdn/shop/files/black_62fb6beb-cb27-426d-a467-eba792a986f3_600x.jpg?v=1719649943" alt="" class="h-full w-full object-cover object-center">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">Shop Collection</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+    <!-- Collection Section-->
+
+      <div class="bg-gray-100">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+              <h2 class="text-4xl font-bold text-gray-900">Collections</h2>
+        
+              <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="https://sunnahconscious.com/cdn/shop/collections/Close_wallet_330x.jpg?v=1718960511" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Accessories
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Beautiful Sunnah Accessories</p>
+                </div>
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="https://sunnahconscious.com/cdn/shop/collections/Restrain_Your_Anger_330x.jpg?v=1719046852" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Full Sleeves
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Full Sleeves with Religious Stuff</p>
+                </div>
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="https://sunnahconscious.com/cdn/shop/collections/Restrain_Your_Anger_330x.jpg?v=1719046852" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Full Sleeves
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Full Sleeves with Religious Stuff</p>
+                </div>
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="https://sunnahconscious.com/cdn/shop/collections/Restrain_Your_Anger_330x.jpg?v=1719046852" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Full Sleeves
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Full Sleeves with Religious Stuff</p>
+                </div>
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="https://sunnahconscious.com/cdn/shop/collections/Restrain_Your_Anger_330x.jpg?v=1719046852" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Full Sleeves
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Full Sleeves with Religious Stuff</p>
+                </div>
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="https://sunnahconscious.com/cdn/shop/collections/Restrain_Your_Anger_330x.jpg?v=1719046852" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Full Sleeves
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Full Sleeves with Religious Stuff</p>
+                </div>
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="https://sunnahconscious.com/cdn/shop/collections/No_day_off_Black_330x.jpg?v=1714579905" alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Sport wear
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Enjoy Sports with Sunnah Sports wear</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  
+    <!-- My Featured products Section  -->
+      
+      <div class="bg-white">
+        <div class="mx-auto max-w-2xl px-4 flex items-center justify-center flex-col py-6 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8">
+          <h2 class="text-4xl font-bold  tracking-tight text-gray-900">Featured products</h2>
+      
+          <div class="Pprod mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            <div class="group relative">
+              <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">Black</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">$35</p>
+              </div>
+            </div> 
+            <!-- More products... -->
+          </div>
+        </div>
+
+        
+     <div class="more flex justify-center items-center">
+      <button
+      class="overflow-hidden relative w-32 p-2 h-12 bg-black text-white border-none rounded-md text-xl font-bold cursor-pointer relative z-10 group"
+    >
+      View All
+      <span
+        class="absolute w-36 h-32 -top-8 -left-2 bg-indigo-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"
+      ></span>
+      <span
+        class="absolute w-36 h-32 -top-8 -left-2 bg-indigo-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-bottom"
+      ></span>
+      <span
+        class="absolute w-36 h-32 -top-8 -left-2 bg-indigo-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-bottom"
+      ></span>
+      <span
+        class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10"
+        >Explore!</span
+      >
+    </button>
+
+     </div>
+
+      </div>
+
+    <!-- Product Publicity Section  -->
+
+      <div class="bg-white">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Popular Stuff</h2>
+            <p class="mt-4 text-gray-500">Crafted with care by Good Goods, our t-shirt is designed for those who value both style and comfort. Made from soft, breathable cotton, this t-shirt ensures all-day comfort, whether you're on the go or lounging at home.</p>
+      
+            <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+              <div class="border-t border-gray-200 pt-4">
+                <dt class="font-medium text-gray-900">Built to Last:</dt>
+                <dd class="mt-2 text-sm text-gray-500">Our t-shirt is constructed with durable quality that stands up to repeated washes, maintaining its shape and color over time.</dd>
+              </div>
+              <div class="border-t border-gray-200 pt-4">
+                <dt class="font-medium text-gray-900">Perfect Fit for Everyone:</dt>
+                <dd class="mt-2 text-sm text-gray-500">Available in sizes ranging from XS to 4XL, this t-shirt offers a perfect fit for every body type, making it an essential addition to any wardrobe.</dd>
+              </div>
+              <div class="border-t border-gray-200 pt-4">
+                <dt class="font-medium text-gray-900">Easy Care:</dt>
+                <dd class="mt-2 text-sm text-gray-500"> While we recommend hand washing for the best care, this t-shirt is also machine washable for your convenience, ensuring it stays looking fresh with minimal effort.</dd>
+              </div>
+              <div class="border-t border-gray-200 pt-4">
+                <dt class="font-medium text-gray-900">Durable Quality:</dt>
+                <dd class="mt-2 text-sm text-gray-500">Constructed to last wash after wash without losing shape or color</dd>
+              </div>
+              <div class="border-t border-gray-200 pt-4">
+                <dt class="font-medium text-gray-900">Material</dt>
+                <dd class="mt-2 text-sm text-gray-500">Made from soft, breathable cotton for all-day comfort
+                  Durable Quality</dd>
+              </div>
+              <div class="border-t border-gray-200 pt-4">
+                <dt class="font-medium text-gray-900">Express Yourself:</dt>
+                <dd class="mt-2 text-sm text-gray-500">With its unique design, this t-shirt lets your personality shine, making it more than just a piece of clothing—it's a statement.</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+            <img src="https://sunnahconscious.com/cdn/shop/files/charcoal_72adc93b-3c8a-4c79-951d-3532ba1815c9_713x.png?v=1717849154" alt="Walnut card tray with white powder coated steel divider and 3 punchout holes." class="rounded-lg bg-gray-100">
+            <img src="https://sunnahconscious.com/cdn/shop/files/black_2b705ba1-b2b6-4e2e-90b8-a089f758314a_713x.png?v=1717849153" alt="Top down view of walnut card tray with embedded magnets and card groove." class="rounded-lg bg-gray-100">
+            <img src="https://sunnahconscious.com/cdn/shop/files/charcoal_3a21ea11-fe17-47e8-98d4-e36df7f652ff_823x.png?v=1717746881" alt="Side of walnut card tray with card groove and recessed card area." class="rounded-lg bg-gray-100">
+            <img src="https://sunnahconscious.com/cdn/shop/files/black_5bfd89c4-7bf1-44ff-a4c9-db236f663bcf_823x.png?v=1717746881" alt="Walnut card tray filled with cards and card angled in dedicated groove." class="rounded-lg bg-gray-100">
+          </div>
+        </div>
+      </div>
+  
+    <!-- Footer Section  -->
+  
+      <footer class="bg-white">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://flowbite.com/" class="flex items-center">
+                      <img src="https://sunnahbd.com/wp-content/uploads/2021/01/logo-gold-glitter-01.png" class="h-11" alt="Sunnah logo" />
+                      <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-900">Sunnah Stuff</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
+                        <ul class="text-gray-500 font-medium">
+                            <li class="mb-4">
+                                <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
+                        <ul class="text-gray-500 font-medium">
+                            <li class="mb-4">
+                                <a href="https://github.com/themesberg/flowbite" class="hover:underline">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
+                        <ul class="text-gray-500 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="#" class="hover:underline">Sunnah Stuff™</a>. All Rights Reserved.</span>
+                <div class="flex mt-4 sm:justify-center sm:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="sr-only">Facebook page</span>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                        </svg>
+                        <span class="sr-only">Discord community</span>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                            <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="sr-only">Twitter page</span>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.13-1.514c-.923-.631.07-.617.07-.617a2.329 2.329 0 0 1 1.68 1.15c1.004 1.717 2.65 1.223 3.299.936.1-.728.388-1.224.712-1.506-2.151-.237-4.43-1.08-4.43-4.79 0-1.06.376-1.933.997-2.62-.1-.238-.434-1.194.095-2.482 0 0 .818-.262 2.68 1.006a9.462 9.462 0 0 1 2.447-.329c.82.002 1.647.111 2.438.327 1.862-1.268 2.68-1.006 2.68-1.006.53 1.288.196 2.244.096 2.482.625.687 1.005 1.56 1.005 2.62 0 3.719-2.291 4.551-4.447 4.785.398.346.753 1.027.753 2.074 0 1.496-.014 2.702-.014 3.073 0 .261.177.572.68.475A9.915 9.915 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="sr-only">GitHub account</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+
+</html>
+
+
+
+

@@ -1,0 +1,18 @@
+{
+  "name": "new-folder-(2)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "Sunnah": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.9",
+    "vite": "^5.4.0"
+  }
+}
