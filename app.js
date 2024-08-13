@@ -1,3 +1,148 @@
+// document.addEventListener('DOMContentLoaded', () => {
+//   const menuButton = document.querySelector('.menu-button');
+//   const dropdownMenu = document.querySelector('.dropdown-menu');
+
+//   if (menuButton && dropdownMenu) {
+//     // Show dropdown on click
+//     menuButton.addEventListener('click', () => {
+//       // Toggle 'hidden' class
+//       dropdownMenu.classList.toggle('hidden');
+      
+//       // Update aria-expanded attribute
+//       const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+//       menuButton.setAttribute('aria-expanded', !expanded);
+      
+//       // Optionally, close other dropdowns
+//       document.querySelectorAll('.dropdown-menu').forEach(menu => {
+//         if (menu !== dropdownMenu) {
+//           menu.classList.add('hidden');
+//         }
+//       });
+//     });
+
+//     // Close dropdown when clicking outside of it
+//     document.addEventListener('click', (event) => {
+//       if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+//         dropdownMenu.classList.add('hidden');
+//         menuButton.setAttribute('aria-expanded', 'false');
+//       }
+//     });
+//   }
+// });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const mobileMenuButton = document.querySelector('[aria-label="Top"] .lg:hidden');
+//   const mobileMenu = document.querySelector('.mobile-menu'); // Assuming you have a mobile menu with this class
+
+//   if (mobileMenuButton && mobileMenu) {
+//     mobileMenuButton.addEventListener('click', () => {
+//       mobileMenu.classList.toggle('hidden');
+//     });
+//   }
+  
+//   // JavaScript for flyout menus
+//   const flyoutButtons = document.querySelectorAll('[aria-expanded="false"]');
+
+//   flyoutButtons.forEach(button => {
+//     button.addEventListener('mouseover', () => {
+//       const flyoutMenu = button.nextElementSibling;
+//       if (flyoutMenu) {
+//         flyoutMenu.classList.add('opacity-100');
+//         flyoutMenu.classList.remove('opacity-0');
+//       }
+//     });
+
+//     button.addEventListener('mouseleave', () => {
+//       const flyoutMenu = button.nextElementSibling;
+//       if (flyoutMenu) {
+//         flyoutMenu.classList.add('opacity-0');
+//         flyoutMenu.classList.remove('opacity-100');
+//       }
+//     });
+//   });
+  
+//   // JavaScript for search functionality
+//   const searchButton = document.querySelector('[aria-label="Search"]');
+//   const searchInput = document.querySelector('.search-input'); // Assuming you have an input field with this class
+
+//   if (searchButton && searchInput) {
+//     searchButton.addEventListener('click', () => {
+//       searchInput.classList.toggle('hidden');
+//     });
+//   }
+  
+//   // JavaScript for cart functionality (if needed)
+//   const cartButton = document.querySelector('.cart-button'); // Assuming you have a button with this class
+
+//   if (cartButton) {
+//     cartButton.addEventListener('click', () => {
+//       // Implement cart functionality here
+//       alert('Cart functionality is not implemented yet!');
+//     });
+//   }
+// });
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const mobileMenuButton = document.querySelector('[data-mobile-menu-button]');
+//   const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+//   mobileMenuButton.addEventListener('click', function () {
+//       const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+//       mobileMenuButton.setAttribute('aria-expanded', !expanded);
+//       mobileMenu.classList.toggle('hidden');
+//   });
+// });
+
+
+
+//   document.addEventListener('DOMContentLoaded', function () {
+//     // Toggle Mobile Menu
+//     const mobileMenuButton = document.querySelector('[data-mobile-menu-button]');
+//     const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+//     if (mobileMenuButton && mobileMenu) {
+//       mobileMenuButton.addEventListener('click', () => {
+//         mobileMenu.classList.toggle('hidden');
+//       });
+//     }
+
+//     // Toggle Flyout Menus
+//     const flyoutButtons = document.querySelectorAll('[data-flyout-button]');
+//     const flyoutMenus = document.querySelectorAll('[data-flyout-menu]');
+
+//     flyoutButtons.forEach((button) => {
+//       button.addEventListener('click', () => {
+//         const targetMenu = document.querySelector(button.getAttribute('data-target'));
+//         if (targetMenu) {
+//           targetMenu.classList.toggle('hidden');
+//         }
+//       });
+//     });
+
+//     // Close flyout menus when clicking outside
+//     document.addEventListener('click', (event) => {
+//       if (!event.target.closest('[data-flyout-menu]') && !event.target.closest('[data-flyout-button]')) {
+//         flyoutMenus.forEach((menu) => {
+//           menu.classList.add('hidden');
+//         });
+//       }
+//     });
+//   });
+
+document.getElementById('menz').addEventListener("click", () => {
+  const bhaiElement = document.querySelector('.bhai');
+  
+  if (bhaiElement.style.display === "none") {
+      bhaiElement.style.display = "block";
+  } else {
+      bhaiElement.style.display = "none";
+  }
+});
+
+
+
+
 const Popular_products = [
     {
       id: 1,
@@ -289,3 +434,4 @@ document.querySelector('#open-modal').addEventListener("click", () => {
 document.querySelector('.cross').addEventListener("click", () => {
     document.querySelector('.modal').classList.add('hidden');
 });
+
